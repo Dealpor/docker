@@ -1,0 +1,27 @@
+# Use a lightweight base image (e.g., official Python image)
+FROM python:3.9-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements.txt
+COPY requirements.txt /app
+
+# Create a virtual environment within the container
+RUN python3 -m venv venv
+
+# Activate the virtual environment (within the same RUN instruction)
+RUN . venv/bin/activate
+
+# Install dependencies using pip
+RUN pip install -r requirements.txt
+
+# Copy your Django project code
+COPY myproject /app
+
+# Expose the port Django uses (usually 8000)
+EXPOSE 8000
+
+# Run the Django development server
+ENTRYPOINT ["python"]
+CMD ["manage.py", "runserver"]

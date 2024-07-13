@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Game Shop</title>
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;  }
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.header nav li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    color: #00ffff;  }
+
+.main {
+    padding: 50px 0;
+}
+
+.banner {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;  }
+
+.banner p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    background-color: #ff00ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+    background-color: #00ffff;  }
+
+.game-card-same-size {
+    width: 200px;  /* Adjust as needed */
+    height: 200px;  /* Adjust as needed */
+    overflow: hidden;  /* Hide any overflowing content */
+}
+
+.game-card-same-size img {
+    width: 100%;  /* Make image fill width of container */
+    height: 100%;  /* Make image fill height of container */
+    object-fit: cover;  /* Resize image to fit container, maintaining aspect ratio */
+}
+
+
+
+.featured
+
+    </style>
+ </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Neon Game Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Consoles</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="banner">
+            <h2>Welcome to the Future of Gaming</h2>
+            <p>Explore the latest games and consoles with neon excitement!</p>
+            <button class="shop-now">Shop Now</button>
+        </section>
+        <section class="featured-games">
+    <h3>Featured Games</h3>
+    <div class="game-card game-card-same-size">
+        <img src="{% static 'myapp/images/uncharted4.jpeg' %}" alt="Game 1">
+        <h4>uncharted</h4>
+        <p>A thrilling adventure awaits!</p>
+        <a href="#">Learn More</a>
+    </div>
+    <div class="game-card game-card-same-size">
+        <img src="{% static 'myapp/images/dof of war.jpeg' %}" alt="Game 2">
+        <h4>God Of war</h4>
+        <p>Experience action-packed gameplay!</p>
+        <a href="#">Learn More</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Neon Game Shop 2024</p>
+    </footer>
+</body>
+</html>
